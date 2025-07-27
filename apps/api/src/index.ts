@@ -1,24 +1,21 @@
-    import fastify from 'fastify';
+// src/index.ts
+import fastify from 'fastify';
+import { userRoutes } from './routes/user.routes';
 
-    // Initializes the Fastify application
-    const app = fastify({
-        logger: true, // Enables the logger so we can see requests in the terminal
-    });
+const app = fastify({
+    logger: true,
+});
 
-    // Defines a test route
-    app.get('/', async (_request, _reply) => {
-        return { hello: 'world' };
-    });
+// Registers the user routes module
+app.register(userRoutes);
 
-    // Function to start the server
-    const start = async () => {
-        try {
-            await app.listen({ port: 3333, host: '0.0.0.0' });
-        } catch (err) {
-            app.log.error(err);
-            process.exit(1);
-        }
-    };
+const start = async () => {
+    try {
+        await app.listen({ port: 3333, host: '0.0.0.0' });
+    } catch (err) {
+        app.log.error(err);
+        process.exit(1);
+    }
+};
 
-    // Starts the server
-    start();
+start();
