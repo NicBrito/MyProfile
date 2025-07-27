@@ -4,14 +4,19 @@
     "private": true,
     "main": "dist/index.js",
     "scripts": {
-        "dev": "echo 'dev script not implemented'",
+        "dev": "tsx watch src/index.ts",
         "build": "tsc",
         "start": "node dist/index.js"
     },
     "author": "Nicolas Brito",
     "license": "MIT",
+    "dependencies": {
+        "fastify": "^4.28.1"
+    },
     "devDependencies": {
         "@myprofile/typescript-config": "workspace:*",
-        "typescript": "^5.8.3"
+        "@types/node": "^24.1.0",
+        "tsx": "^4.16.2",
+        "typescript": "^5.5.3"
     }
 }
