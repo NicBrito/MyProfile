@@ -16,7 +16,7 @@
             "allowSyntheticDefaultImports": true,
 
             /* Emit */
-            "noEmit": true, // Não emite output (JS), pois é uma config base
+            "noEmit": true, // Does not emit output (JS), since this is a base config
             "isolatedModules": true,
 
             /* Language and Environment */
