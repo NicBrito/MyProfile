@@ -1,0 +1,28 @@
+# Define the Docker Compose version
+version: '3.8'
+
+# Define the services (containers) of our application
+services:
+  # Our database service
+  postgres:
+    image: postgres:16-alpine  # Uses the official PostgreSQL 16 image, 'alpine' version (lighter)
+    container_name: myprofile-postgres # Names the container for easy identification
+    restart: always # Ensures the container automatically restarts if it stops
+    environment:
+      # Sets environment variables to configure the database
+      POSTGRES_USER: myprofileuser
+      POSTGRES_PASSWORD: myprofilepassword
+      POSTGRES_DB: myprofile_dev
+    ports:
+      # Maps port 5432 of the container to port 5432 of your machine
+      # Format: "HOST:CONTAINER"
+      - '5432:5432'
+    volumes:
+      # Creates a volume to persist database data
+      # This ensures data is not lost when restarting the container
+      - postgres_data:/var/lib/postgresql/data
+
+# Define the volumes that Docker will manage
+volumes:
+  postgres_data:
+    driver: local
