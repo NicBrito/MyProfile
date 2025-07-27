@@ -1,0 +1,21 @@
+    {
+        "name": "myprofile-monorepo",
+        "version": "1.0.0",
+        "private": true,
+        "description": "Monorepo for the MyProfile application",
+        "author": "Nicolas Brito",
+        "license": "MIT",
+        "scripts": {
+        "dev": "echo \"Error: no dev script specified\" && exit 1"
+        },
+        "keywords": [
+        "react-native",
+        "nodejs",
+        "graphql",
+        "monorepo"
+        ],
+        "engines": {
+        "node": ">=18.0.0",
+        "pnpm": ">=8.0.0"
+        }
+    }
