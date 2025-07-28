@@ -1,0 +1,9 @@
+### Create a new user
+# @name createUser
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+    "email": "nicolas@example.com",
+    "password": "supersecretpassword"
+}
