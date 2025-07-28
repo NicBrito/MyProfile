@@ -1,10 +1,12 @@
-    {
-        "extends": "@myprofile/typescript-config/tsconfig.json",
-        "compilerOptions": {
-        "outDir": "./dist", // Where the compiled JS files will be saved
-        "rootDir": "./src", // Where our TS source code is located
-        "noEmit": false // We need it to emit JS to run the server
-        },
-        "include": ["src"], // Which folders to compile
-        "exclude": ["node_modules", "dist"]
-    }
+// apps/api/tsconfig.json
+{
+    "extends": "@myprofile/typescript-config/tsconfig.json",
+    "compilerOptions": {
+        "composite": true, // This flag is required for project references
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "noEmit": false
+    },
+    "include": ["src", "src/@types"], // Ensure the @types directory is included
+    "exclude": ["node_modules", "dist"]
+}

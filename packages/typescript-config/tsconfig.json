@@ -1,31 +1,24 @@
-    {
-        "compilerOptions": {
-            /* Type Checking */
-            "strict": true,
-            "noImplicitAny": true,
-            "strictNullChecks": true,
-            "noUnusedLocals": true,
-            "noUnusedParameters": true,
-            "noFallthroughCasesInSwitch": true,
-
-            /* Modules */
-            "module": "ESNext",
-            "moduleResolution": "node",
-            "resolveJsonModule": true,
-            "esModuleInterop": true,
-            "allowSyntheticDefaultImports": true,
-
-            /* Emit */
-            "noEmit": true, // Does not emit output (JS), since this is a base config
-            "isolatedModules": true,
-
-            /* Language and Environment */
-            "target": "ES2022",
-            "lib": ["ESNext"],
-            "skipLibCheck": true,
-
-            /* Interop Constraints */
-            "forceConsistentCasingInFileNames": true
-        },
-        "exclude": ["node_modules"]
-    }
+// packages/typescript-config/tsconfig.json
+{
+    "compilerOptions": {
+        "composite": true, // This flag is required for project references
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "noEmit": true,
+        "isolatedModules": true,
+        "target": "ES2022",
+        "lib": ["ESNext"],
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": ["node_modules"]
+}

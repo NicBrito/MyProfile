@@ -1,0 +1,8 @@
+// MyProfile/tsconfig.json
+{
+    "files": [],
+    "references": [
+        { "path": "./packages/typescript-config" },
+        { "path": "./apps/api" }
+    ]
+}
