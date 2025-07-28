@@ -7,3 +7,15 @@ Content-Type: application/json
     "email": "nicolas@example.com",
     "password": "supersecretpassword"
 }
+
+###
+
+### Authenticate a user
+# @name authenticateUser
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "email": "nicolas@example.com",
+    "password": "supersecretpassword"
+}
